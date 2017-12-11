@@ -19,7 +19,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	echo "alias ll='ls -al'" >> /root/.profile && \
 	apt-get -qq update && \
 	apt-get -y -qq dist-upgrade && \
-	apt-get -y -qq install locales openssh-server pwgen vim wget curl screen sudo git python2.7 make build-essential pkg-config cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev  libgdk-pixbuf2.0-dev && \
+	apt-get -y -qq install locales openssh-server pwgen vim wget curl screen sudo git python2.7 make build-essential pkg-config cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev  libgdk-pixbuf2.0-dev netcat && \
 	locale-gen zh_TW && \
 	locale-gen zh_TW.UTF-8 && \
 	dpkg-reconfigure --frontend=noninteractive locales && \ 
