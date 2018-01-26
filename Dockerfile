@@ -34,7 +34,8 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
 	apt-get -qq update && \
 	apt-get -y -qq install nodejs && \
-	npm install -g node-gyp
+	npm install -g node-gyp && \ 
+	apt-get install libcurl4-openssl-dev -y
 
 WORKDIR /script
 EXPOSE 22
