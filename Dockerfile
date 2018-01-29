@@ -35,7 +35,8 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	apt-get -qq update && \
 	apt-get -y -qq install nodejs && \
 	npm install -g node-gyp && \ 
-	apt-get install libcurl4-openssl-dev -y
+	apt-get install libcurl4-openssl-dev -y && \
+	wget http://curl.haxx.se/download/curl-7.58.0.tar.gz && tar zxvf curl-7.58.0.tar.gz && cd curl-7.58.0 && ./configure && make && make install && ldconfig
 
 WORKDIR /script
 EXPOSE 22
